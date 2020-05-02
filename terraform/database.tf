@@ -18,3 +18,12 @@ resource "aws_dynamodb_table" "citation-dynamodb-table" {
     Name        = "dynamodb-covid19citation-table"
   }
 }
+
+resource "aws_s3_bucket" "spark-dynamodb-example" {
+  bucket = "spark-dynamodb-example"
+  acl    = "private"
+
+  tags = {
+    Name        = "spark-dynamodb-example"
+  }
+}
